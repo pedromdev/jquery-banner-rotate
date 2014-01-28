@@ -1,4 +1,6 @@
-<link href="<?php echo get_option('siteurl') ?>/wp-content/plugins/jquery-banner-rotate/css/banner-rotativo.css" rel="stylesheet" />
+<?php global $pluginurl ?>
+
+<link href="<?php echo $pluginurl ?>css/banner-rotativo.css" rel="stylesheet" />
 <table class="wp-list-table widefat fixed" style="width:600px; margin-top:15px;">
   <tr>
     <td><h2>Banner Rotativo</h2></td>

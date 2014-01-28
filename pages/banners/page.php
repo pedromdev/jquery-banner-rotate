@@ -1,4 +1,6 @@
-<link href="<?php echo get_option('siteurl') ?>/wp-content/plugins/jquery-banner-rotate/css/banner-rotativo.css" rel="stylesheet" />
+<?php global $pluginurl ?>
+
+<link href="<?php echo $pluginurl ?>css/banner-rotativo.css" rel="stylesheet" />
   <h1>Banners<a href="admin.php?page=banner-rotativo&opcao=novo_banner" class="adicionar-novo">Novo</a></h1>
 	<table class="wp-list-table widefat fixed banners">
     	<thead>

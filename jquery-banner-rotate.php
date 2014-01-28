@@ -10,9 +10,11 @@ License: GPL3
 */
 
 	$request = false;
+	$pluginurl = plugin_dir_url( __FILE__ );
+	
 	require_once('db/banner-rotativo-db.php');
 	require_once('db/banner-rotativo-db-slider.php');
-	require_once('banner-rotativo-shortcode.php');
+	include_once('banner-rotativo-shortcode.php');
 	
 	add_action('admin_menu', 'menu');
 	register_activation_hook(__FILE__,'tabelas');

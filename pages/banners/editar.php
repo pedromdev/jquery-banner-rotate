@@ -1,3 +1,5 @@
+<?php global $pluginurl ?>
+
 <form action="admin.php?page=banner-rotativo&opcao=atualizar_banner" method="post" style="width:450px;" onsubmit="valida(this); return false;">
 	<h2>Editar</h2>
 	<table class="wp-list-table widefat fixed">
@@ -43,4 +45,4 @@
 <br/>
 <a href="admin.php?page=banner-rotativo">Voltar</a>
 </form>
-<script type="text/javascript" src="<?php echo ABSPATH ?>/wp-content/plugins/banner-rotativo/js/banner-rotativo.js"></script>
+<script type="text/javascript" src="<?php echo $pluginurl ?>js/banner-rotativo.js"></script>
