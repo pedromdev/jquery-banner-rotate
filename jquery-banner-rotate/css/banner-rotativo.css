@@ -1,0 +1,49 @@
+.banners{
+	width: 600px;
+	margin: 40px 50px 40px 5px;
+}
+
+.crud{
+	width: 40px;
+}
+
+td.coluna-data{
+	width:209px;
+	height:auto;
+}
+
+.adicionar-novo{
+	background: #e0e0e0;
+	padding: 4px 8px;
+	margin: 0 0 0 4px;
+	font-size: 13px;
+	border-radius: 2px;
+	position: relative;
+	top: -3px;
+	text-decoration:none;
+}
+
+.alert-msg{
+	color:#F00;
+	font-weight:bold;
+}
+
+/* Sobre */
+
+span.shortcode{
+	background-color: #e5e5e5;
+	font-size:12px;
+	padding: 0 2px;
+}
+
+span.descricao{
+	width: 100%;
+}
+
+span.descricao p{
+	font-size:10px;
+	padding: 0;
+	margin: 0;
+	
+	text-align:center;
+	

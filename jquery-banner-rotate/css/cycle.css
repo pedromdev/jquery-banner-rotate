@@ -1,0 +1,8 @@
+#banners{
+	overflow: hidden;
+}
+
+#banners a{
+	height:313px;
+	float: left;
+}
