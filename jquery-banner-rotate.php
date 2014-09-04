@@ -3,7 +3,7 @@
 Plugin Name: jQuery Banner Rotate
 Plugin URI: https://www.facebook.com/pedro.marcelo.50
 Description: Cria banners rotativos usando jQuery Cycle usando controle por datas de expiração.
-Version: 2.1
+Version: 3.0.2
 Author: Pedro Marcelo
 Author URI: https://www.facebook.com/pedro.marcelo.50
 License: GPL3
@@ -15,6 +15,7 @@ License: GPL3
 	require_once('db/banner-rotativo-db.php');
 	require_once('db/banner-rotativo-db-slider.php');
 	include_once('banner-rotativo-shortcode.php');
+	include_once('widget.php');
 	
 	add_action('admin_menu', 'menu');
 	register_activation_hook(__FILE__,'tabelas');
@@ -41,6 +42,9 @@ License: GPL3
 				switch ($_REQUEST['opcao']){
 					/* BANNER */
 					case 'novo_banner':
+						wp_enqueue_script('media-upload');
+						wp_enqueue_script('thickbox');
+						wp_enqueue_style('thickbox');
 						novo_banner();
 						break;
 					case 'salvar_banner':
@@ -53,6 +57,9 @@ License: GPL3
 						atualizar_banner();
 						break;
 					case 'editar_banner':
+						wp_enqueue_script('media-upload');
+						wp_enqueue_script('thickbox');
+						wp_enqueue_style('thickbox');
 						editar_banner();
 						break;
 					default:

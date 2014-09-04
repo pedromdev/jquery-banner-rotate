@@ -6,9 +6,19 @@ function banner_shortcode($atts){
 	require_once('db/banner-rotativo-db.php');
 	require_once('db/banner-rotativo-db-slider.php');
 	
-	extract(shortcode_atts(array('id' => '',
-								 'width' => '300',
-								 'height' => '313'), $atts));
+	extract(
+		shortcode_atts(
+			array(
+				'id' => '',
+				'width' => '300',
+				'height' => '313',
+				'count' => '5'
+			),
+			$atts
+		)
+	);
+
+	$count = (is_numeric($count) && (intval($count) == floatval($count)))? $count : '5';
 	
 	$saida = '';
 	$imagens = null;
@@ -17,11 +27,11 @@ function banner_shortcode($atts){
 	$saida .= '<script src="'.$pluginurl.'js/cycle.js"></script>';
 	
 	if($id == ''){
-		$imagens = BRDB::listar_todos_cinco();
+		$imagens = BRDB::listar_todos($count);
 		
 		$saida .= '<script src="'.$pluginurl.'js/fade-slider-cycle.js"></script>';
 	} else {
-		$imagens = BRDB::listar_todos_por_slider($id);
+		$imagens = BRDB::listar_todos_por_slider($id, $count);
 		$slider = BRDBSLIDER::buscar_por_id($id);
 		
 		if($slider->efeito == 'default'){

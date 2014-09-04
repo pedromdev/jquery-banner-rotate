@@ -62,17 +62,17 @@ CREATE TABLE '.$tabela.' (
 		return $imagem;
 	}
 	
-	static function listar_todos(){
+	static function listar_todos($limit = '5'){
 		global $wpdb;
 		$tabela = $wpdb->base_prefix.'banners';
-		$imagens = $wpdb->get_results( "SELECT id, link, data_retirada, slider_id, pagina, nova FROM $tabela ORDER BY data_insercao DESC");
+		$imagens = $wpdb->get_results("SELECT id, link, data_retirada, slider_id, pagina, nova FROM $tabela ORDER BY data_insercao DESC LIMIT $limit");
 		return $imagens;
 	}
 	
-	static function listar_todos_por_slider($id){
+	static function listar_todos_por_slider($id, $limit = '5'){
 		global $wpdb;
 		$tabela = $wpdb->base_prefix.'banners';
-		$imagens = $wpdb->get_results( "SELECT id, link, data_retirada, pagina, nova FROM $tabela WHERE slider_id = $id ORDER BY data_insercao DESC LIMIT 5");
+		$imagens = $wpdb->get_results( "SELECT id, link, data_retirada, pagina, nova FROM $tabela WHERE slider_id = $id ORDER BY data_insercao DESC LIMIT $limit");
 		return $imagens;
 	}
 	

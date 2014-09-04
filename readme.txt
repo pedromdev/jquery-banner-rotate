@@ -1,19 +1,19 @@
 === jQuery Banner Rotate ===
-Contributors: Pedro Marcelo
+Contributors: pedromjava
 Tags: jquery, banner, rotate, date, expiration
-Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 2.1
+Requires at least: 3.5
+Tested up to: 3.9.2
+Stable tag: 3.0.2
 
-CriaÁ„o de slides onde as imagens podem ter tempo de expiraÁ„o.
+Cria√ß√£o de slides onde as imagens podem ter tempo de expira√ß√£o.
 
 == Description ==
 
-O plugin permite que sejam criados slides usando jQuery, onde as imagens podem ou n„o ter uma data de expiraÁ„o. Sendo assim, ao chegar o dia da expiraÁ„o, a imagem p·ra de aparecer, mas o restante das imagens continuam aparecendo normalmente.
+O plugin permite que sejam criados slides usando jQuery, onde as imagens podem ou n√£o ter uma data de expira√ß√£o. Sendo assim, ao chegar o dia da expira√ß√£o, a imagem p√°ra de aparecer, mas o restante das imagens continuam aparecendo normalmente.
 
 == Installation ==
 
-1.Extraia a pasta do plugin no diretÛrio /wp-content/plugins/ do seu site.
+1.Extraia a pasta do plugin no diret√≥rio /wp-content/plugins/ do seu site.
 2.Ative o plugin pelo menu de Plugins do WordPress.
 
 == License ==
@@ -27,20 +27,25 @@ You should have received a copy of the GNU General Public License along with jQu
 
 == Frequently Asked Questions ==
 
-= … possÌvel sugerir modificaÁıes e idÈias para este plugin? =
+= √â poss√≠vel sugerir modifica√ß√µes e ideias para este plugin? =
 
-Claro que pode, basta mandar um e-mail para pedromarcelodesaalves@gmail.com com o filtro [SUGEST√O] no assunto do e-mail ou mande uma mensagem no Facebook http://www.facebook.com/pedro.marcelo.50
+Claro que pode, basta mandar um e-mail para pedromarcelodesaalves@gmail.com com o filtro [SUGEST√ÉO] no assunto do e-mail ou mande uma mensagem no Facebook http://www.facebook.com/pedro.marcelo.50
 
 == Changelog ==
 
+= 3.0.2 =
+* Adicionando widget no plugin
+* Inserindo Media Uploader como op√ß√£o ao inserir uma imagem
+* Par√¢metro 'count' inserido no shortcode para limitar o n√∫mero m√°ximo de imagens no slider 
+
 = 2.1 =
-* CorreÁ„o de bugs no CRUD dos slides
+* Corre√ß√£o de bugs no CRUD dos slides
 
 = 2.0 =
-* CriaÁ„o do esquema de slides diferentes
+* Cria√ß√£o do esquema de slides diferentes
 
 = 1.0.2 =
-* CorreÁ„o de bugs com relaÁ„o a ativaÁ„o do plug-in
+* Corre√ß√£o de bugs com rela√ß√£o a ativa√ß√£o do plug-in
 
 = 1.0 =
-* CriaÁ„o do plug-in com esquema de imagens com data de expiraÁ„o
+* Cria√ß√£o do plug-in com esquema de imagens com data de expira√ß√£o

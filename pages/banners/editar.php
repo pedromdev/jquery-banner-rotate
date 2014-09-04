@@ -1,18 +1,19 @@
 <?php global $pluginurl ?>
 
-<form action="admin.php?page=banner-rotativo&opcao=atualizar_banner" method="post" style="width:450px;" onsubmit="valida(this); return false;">
+<form action="admin.php?page=banner-rotativo&opcao=atualizar_banner" method="post" style="width:490px;" onsubmit="valida(this); return false;">
 	<h2>Editar</h2>
 	<table class="wp-list-table widefat fixed">
   <tr>
   	<input type="hidden" name="id" id="id" value="<?php echo $imagem->id ?>" />
-    <td><label for="link">URL da imagem</label></td>
+    <td width="100"><label for="link">URL da imagem</label></td>
     <td>
-      <input type="text" name="link" id="link" value="<?php echo $imagem->link ?>"></td>
+      <input type="text" name="link" id="link" value="<?php echo $imagem->link ?>"> ou <input type="submit" class="button-primary" id="jbr_upload_image_button" value="Carregar imagem">
+  </td>
   </tr>
   <tr>
     <td><label for="dataRetirada">Data da retirada</label></td>
     <td>
-      <input type="text" name="dataRetirada" id="dataRetirada" onKeyPress="formatar(this);" value="<?php echo ($imagem->data_retirada != '')? data($imagem->data_retirada) : "" ?>"></td>
+      <input type="text" name="dataRetirada" id="dataRetirada" value="<?php echo ($imagem->data_retirada != '')? data($imagem->data_retirada) : "" ?>"></td>
   </tr>
   <tr>
     <td>URL da página</td>
@@ -46,3 +47,23 @@
 <a href="admin.php?page=banner-rotativo">Voltar</a>
 </form>
 <script type="text/javascript" src="<?php echo $pluginurl ?>js/banner-rotativo.js"></script>
+<script src="<?php echo $pluginurl ?>js/mask.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    (function($){
+        $(document).ready(function(){
+            $('#dataRetirada').mask('99/99/9999');
+            $('#jbr_upload_image_button').click(function() {
+                var formfield = $('#link').attr('name');
+                tb_show('Carregar Imagem', 'media-upload.php?referer=media_page&post_id=0&type=image&amp;TB_iframe=true', false);
+                return false;
+            });
+
+            window.send_to_editor = function(html) {
+                var imgurl = $('img', html).attr('src');
+                $('#link').val(imgurl);
+                tb_remove();
+                $('#submit_button').trigger('click');
+            }
+        });
+    })(jQuery.noConflict());
+</script>
